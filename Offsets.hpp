@@ -1,17 +1,17 @@
-// Game Version: v.3.0.78.32
+// Game Version: v 3.0.79.44
 #pragma once
 constexpr long OFF_REGION = 0x140000000;    //[Static]->Region
 constexpr long OFF_LEVEL = 0x17ec544;       //[Miscellaneous]->LevelName
 constexpr long OFF_LOCAL_PLAYER = 0x23e91f8;//[Miscellaneous]->LocalPlayer
 constexpr long OFF_ENTITY_LIST = 0x1f15f88; //[Miscellaneous]->cl_entitylist
 constexpr long OFF_GLOBAL_VARS = 0x17ec040; //[Miscellaneous]->GlobalVars
-constexpr long OFF_NAMELIST = 0xd350450;    //[Miscellaneous]->NameList
+constexpr long OFF_NAMELIST = 0xd388450;    //[Miscellaneous]->NameList
 
 // Buttons
-constexpr long OFF_IN_ATTACK = 0x0769b5d8;  //[Buttons]->in_attack
-constexpr long OFF_IN_JUMP = 0x0769b6e0;    //[Buttons]->in_jump
-constexpr long OFF_IN_DUCK = 0x0769b7e8;    //[Buttons]->in_duck
-constexpr long OFFSET_IN_FORWARD = 0x0769b528; //[Buttons]->in_forward
+constexpr long OFF_IN_ATTACK = 0x0769b658;  //[Buttons]->in_attack
+constexpr long OFF_IN_JUMP = 0x0769b778;    //[Buttons]->in_jump
+constexpr long OFF_IN_DUCK = 0x0769b868;    //[Buttons]->in_duck
+constexpr long OFFSET_IN_FORWARD = 0x0769b5a8; //[Buttons]->in_forward
 constexpr long OFFSET_TRAVERSAL_START_TIME = 0x2b70; //[RecvTable.DT_LocalPlayerExclusive]->m_traversalStartTime
 constexpr long OFFSET_TRAVERSAL_PROGRESS = 0x2b6c; //[RecvTable.DT_LocalPlayerExclusive]->m_traversalProgress
 constexpr long OFFSET_TRAVERSAL_RELEASE_TIME = 0x2b78; //[RecvTable.DT_LocalPlayerExclusive]->m_traversalReleaseTime
@@ -48,20 +48,20 @@ constexpr long OFF_NAMEINDEX = 0x38;         //[RecvTable.DT_BaseEntity]
 constexpr long OFF_XPLEVEL = 0x3724;         //m_xp
 constexpr long OFF_SQUAD_ID = 0x0344;        //m_squadID
 constexpr long OFF_GAMEMODE = 0x02421250;    //mp_gamemode
-constexpr long OFF_SPECTATOR_LIST = 0x022b8c30; //IDA signtature -> [48 8B 0D ? ? ? ? 48 85 C9 74 ? 48 8B 01 FF ? ? 48 85 C0 74 ? 48 63 4E 38]
+constexpr long OFF_SPECTATOR_LIST = 0x1f17fa8; //IDA signtature -> [48 8B 0D ? ? ? ? 48 85 C9 74 ? 48 8B 01 FF ? ? 48 85 C0 74 ? 48 63 4E 38]
 constexpr long OFF_SPECTATOR_LIST_ARRAY = 0x974; 
 
 // Weapon
 constexpr long OFF_WEAPON_HANDLE = 0x1944;   //[RecvTable.DT_BaseCombatCharacter]->m_latestPrimaryWeapons
 constexpr long OFF_WEAPON_INDEX = 0x1788;    //[RecvTable.DT_WeaponX]->m_weaponNameIndex
-constexpr long OFFSET_AMMO = 0x1590;         //[DT_WeaponX_LocalWeaponData]->m_ammoInClip
+constexpr long OFFSET_AMMO = 0x1564;         //[DT_WeaponX_LocalWeaponData]->m_ammoInClip
 constexpr long OFF_GRENADE_HANDLE = 0x1954;  //[RecvTable.DT_Player]->m_latestNonOffhandWeapons
 constexpr long OFF_SKIN = 0x0d68;            //[RecvTable.DT_BaseAnimating]->m_nSkin
 constexpr long OFF_WEAPON_DISCARDED = 0x15a9;//[RecvTable.DT_WeaponX]->m_discarded
 constexpr long OFFSET_TIME_BASE = 0x2088;    //[RecvTable.DT_Player]->m_currentFramePlayer.timeBase
 
-constexpr long OFF_PROJECTILESCALE = 0x04f4 + 0x8; //CWeaponX!m_flProjectileScale //[WeaponSettings]->projectile_gravity_scale + [WeaponSettingsMeta].base
-constexpr long OFF_PROJECTILESPEED = 0x04ec; //CWeaponX!m_flProjectileSpeed //[WeaponSettings]->projectile_launch_speed + [WeaponSettingsMeta].base
+constexpr long OFF_PROJECTILESCALE = 0x1EC4 + 0x8; //CWeaponX!m_flProjectileScale //[WeaponSettings]->projectile_gravity_scale + [WeaponSettingsMeta].base
+constexpr long OFF_PROJECTILESPEED = 0x1EC4; //CWeaponX!m_flProjectileSpeed //[WeaponSettings]->projectile_launch_speed + [WeaponSettingsMeta].base
 
 // Glow
 constexpr long HIGHLIGHT_TYPE_SIZE = 0x34;
